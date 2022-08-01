@@ -13,34 +13,46 @@ const Experience = () => {
           <h3>Frontend Development</h3>
           <div className="experience__content">
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>HTML</h4>
-              <small className="text-light">Experienced</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>HTML</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>CSS</h4>
-              <small className="text-light">Experienced</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>CSS</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>JavaScript</h4>
-              <small className="text-light">Intermediate</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>JavaScript</h4>
+                <small className="text-light">Intermediate</small>
+              </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>WordPress</h4>
-              <small className="text-light">Experienced</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>WordPress</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>WooCommerce</h4>
-              <small className="text-light">Experienced</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>WooCommerce</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>HTML Email</h4>
-              <small className="text-light">Experienced</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>HTML Email</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </article>
           </div>
         </div>
@@ -50,34 +62,46 @@ const Experience = () => {
           <h3>Other</h3>
           <div className="experience__content">
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>Baking</h4>
-              <small className="text-light">Experienced</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>Baking</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>Cooking</h4>
-              <small className="text-light">Experienced</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>Cooking</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>Cycling</h4>
-              <small className="text-light">Experienced</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>Cycling</h4>
+                <small className="text-light">Experienced</small>
+              </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>Brazilian Jiu-Jitsu</h4>
-              <small className="text-light">Beginner</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>Brazilian Jiu-Jitsu</h4>
+                <small className="text-light">Beginner</small>
+              </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>Electronic Music Producer</h4>
-              <small className="text-light">Intermediate</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>Music Production</h4>
+                <small className="text-light">Intermediate</small>
+              </div>
             </article>
             <article className="experience__details">
-              <BsPatchCheckFill />
-              <h4>Piano</h4>
-              <small className="text-light">Beginner</small>
+              <BsPatchCheckFill className="experience__details-icon" />
+              <div>
+                <h4>Piano</h4>
+                <small className="text-light">Beginner</small>
+              </div>
             </article>
           </div>
         </div>
