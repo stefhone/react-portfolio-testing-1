@@ -1,7 +1,5 @@
-.container.container__testimonials {
+.container.testimonials__container {
     width: 40%;
-    display: grid;
-    grid-template-columns: ;
 }
 
 .client__avatar {
@@ -29,3 +27,21 @@
     margin: .8rem auto 0;
 }
 
+
+/* MEDIA QUERIES (MEDIUM TABLET DEVICES) */
+@media screen and (max-width: 1024px) {
+    .container.testimonials__container {
+        width: 60%;
+    }
+}
+
+/* MEDIA QUERIES (SMALL MOBILE DEVICES) */
+@media screen and (max-width: 600px) {
+    .container.testimonials__container {
+        width: var(--container-width-sm);
+    }
+
+    .client__review {
+        width: var(--container-width-sm);
+    }
+}
