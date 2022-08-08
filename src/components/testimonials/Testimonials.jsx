@@ -15,42 +15,42 @@ const Testimonials = () => {
         <article className="testimonial">
           <div className="client__avatar">
             <img src={AVTR1} alt="Avator One" />
-            <h5 className="client__name">Ernest Achiever</h5>
+          </div>
+          <h5 className="client__name">Ernest Achiever</h5>
             <small className="client__review">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Fugit ex deserunt molestias sapiente fugiat dolores voluptate, placeat dolor officia neque!
             </small>
-          </div>
         </article>
         <article className="testimonial">
           <div className="client__avatar">
             <img src={AVTR2} alt="Avator Two" />
-            <h5 className="client__name">Ernest Achiever</h5>
+          </div>
+          <h5 className="client__name">Ernest Achiever</h5>
             <small className="client__review">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Fugit ex deserunt molestias sapiente fugiat dolores voluptate, placeat dolor officia neque!
             </small>
-          </div>
         </article>
         <article className="testimonial">
           <div className="client__avatar">
             <img src={AVTR3} alt="Avator Three" />
-            <h5 className="client__name">Ernest Achiever</h5>
+          </div>
+          <h5 className="client__name">Ernest Achiever</h5>
             <small className="client__review">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Fugit ex deserunt molestias sapiente fugiat dolores voluptate, placeat dolor officia neque!
             </small>
-          </div>
         </article>
         <article className="testimonial">
           <div className="client__avatar">
             <img src={AVTR4} alt="Avator Four" />
-            <h5 className="client__name">Ernest Achiever</h5>
+          </div>
+          <h5 className="client__name">Ernest Achiever</h5>
             <small className="client__review">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Fugit ex deserunt molestias sapiente fugiat dolores voluptate, placeat dolor officia neque!
             </small>
-          </div>
         </article>
       </div>
     </section>
