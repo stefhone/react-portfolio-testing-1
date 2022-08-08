@@ -5,6 +5,29 @@ import AVTR2 from '../../assets/avatar2.jpg'
 import AVTR3 from '../../assets/avatar3.jpg'
 import AVTR4 from '../../assets/avatar4.jpg'
 
+const data = [
+  {
+    avatar: AVTR1,
+    name: 'Tina Snow',
+    review: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolorem quam illum, autem necessitatibus eos suscipit excepturi error. Officia debitis nobis repellat dolore, quisquam mollitia. Quibusdam aliquid, ut ipsam cum corporis soluta dicta reiciendis recusandae vero provident eos est impedit! Laboriosam exercitationem necessitatibus in hic minus ut optio rerum.'
+  },
+  {
+    avatar: AVTR2,
+    name: 'Shatta Wale',
+    review: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolorem quam illum, autem necessitatibus eos suscipit excepturi error. Officia debitis nobis repellat dolore, quisquam mollitia. Quibusdam aliquid, ut ipsam cum corporis soluta dicta reiciendis recusandae vero provident eos est impedit! Laboriosam exercitationem necessitatibus in hic minus ut optio rerum.'
+  },
+  {
+    avatar: AVTR3,
+    name: 'Kwame Despite',
+    review: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolorem quam illum, autem necessitatibus eos suscipit excepturi error. Officia debitis nobis repellat dolore, quisquam mollitia. Quibusdam aliquid, ut ipsam cum corporis soluta dicta reiciendis recusandae vero provident eos est impedit! Laboriosam exercitationem necessitatibus in hic minus ut optio rerum.'
+  },
+  {
+    avatar: AVTR4,
+    name: 'Nana Ama McBrown',
+    review: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolorem quam illum, autem necessitatibus eos suscipit excepturi error. Officia debitis nobis repellat dolore, quisquam mollitia. Quibusdam aliquid, ut ipsam cum corporis soluta dicta reiciendis recusandae vero provident eos est impedit! Laboriosam exercitationem necessitatibus in hic minus ut optio rerum.'
+  }
+]
+
 const Testimonials = () => {
   return (
     <section id="testimonials">
@@ -12,46 +35,20 @@ const Testimonials = () => {
       <h2>Testimonials</h2>
 
       <div className="container testimonials__container">
-        <article className="testimonial">
-          <div className="client__avatar">
-            <img src={AVTR1} alt="Avator One" />
-          </div>
-          <h5 className="client__name">Ernest Achiever</h5>
-            <small className="client__review">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Fugit ex deserunt molestias sapiente fugiat dolores voluptate, placeat dolor officia neque!
-            </small>
-        </article>
-        <article className="testimonial">
-          <div className="client__avatar">
-            <img src={AVTR2} alt="Avator Two" />
-          </div>
-          <h5 className="client__name">Ernest Achiever</h5>
-            <small className="client__review">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Fugit ex deserunt molestias sapiente fugiat dolores voluptate, placeat dolor officia neque!
-            </small>
-        </article>
-        <article className="testimonial">
-          <div className="client__avatar">
-            <img src={AVTR3} alt="Avator Three" />
-          </div>
-          <h5 className="client__name">Ernest Achiever</h5>
-            <small className="client__review">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Fugit ex deserunt molestias sapiente fugiat dolores voluptate, placeat dolor officia neque!
-            </small>
-        </article>
-        <article className="testimonial">
-          <div className="client__avatar">
-            <img src={AVTR4} alt="Avator Four" />
-          </div>
-          <h5 className="client__name">Ernest Achiever</h5>
-            <small className="client__review">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Fugit ex deserunt molestias sapiente fugiat dolores voluptate, placeat dolor officia neque!
-            </small>
-        </article>
+        {
+          data.map(({avatar,name,review}, index) => {
+            return(
+              <article key={index} className="testimonial">
+                <div className="client__avatar">
+                  <img src={avatar} alt={name} />
+                </div>
+                <h5 className="client__name">{name}</h5>
+                  <small className="client__review">{review}
+                  </small>
+              </article>
+            )
+          })
+        }
       </div>
     </section>
   )

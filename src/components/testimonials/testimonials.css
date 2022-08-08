@@ -8,7 +8,7 @@
     overflow: hidden;
     border-radius: 50%;
     margin: 0 auto 1rem;
-    border: .4rem solud var(--color-primary-variant);
+    border: .4rem solid var(--color-primary-variant);
 }
 
 .testimonial {
