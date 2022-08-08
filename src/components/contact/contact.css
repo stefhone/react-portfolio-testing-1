@@ -35,3 +35,20 @@
     display: inline-block;
     font-size: .8rem; 
 }
+
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary-variant);
+    color: var(--color-white );
+}
