@@ -13,6 +13,8 @@
 :root {
     --color-bg: #1f1f38;
     --color-bg-variant: #2c2c6c;
+    --color-bg-light: #f5f5f5;
+    --color-text-variant: #171717;
     --color-primary: #4db5ff;
     --color-primary-variant: rgba(77, 181, 255, .4);
     --color-white: #fff;
@@ -63,9 +65,14 @@ section {
     margin-top: 8rem;
 }
 
-section > h2, section > h5 {
+section > h1, section > h2, section > h5 {
     text-align: center;
     color: var(--color-light);
+}
+
+section > h1 {
+    margin-bottom: 3rem;
+    color: var(--color-white);
 }
 
 section > h2 {
@@ -112,6 +119,34 @@ img {
     display: block;
     width: 100%;
     object-fit: cover;
+}
+
+.blog {
+    background: var(--color-bg-light);
+    padding: 2.5rem;
+    margin-top: 0; 
+    height: 100vh;
+    position: relative;   
+}
+
+.blog > div:first-of-type {
+    background: var(--color-white);
+    border-radius: 4px;
+    padding: 2.5rem;
+    box-shadow: 0 0 0 1px rgb(23 23 23 / 10%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.blog > h1 {
+    color: var(--color-text-variant);
+    font-weight: 600;
+}
+
+.blog .content > h3 {
+    color: var(--color-text-variant);
+    font-weight: 600;   
 }
 
 /* MEDIA QUERIES (MEDIUM TABLET DEVICES) */
