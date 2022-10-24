@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
@@ -15,6 +15,20 @@ import NotFound from './components/not-found/NotFound';
 
 
 const App = () => {
+
+  const [practice, setPractice] = useState(null)
+
+  useEffect(() => {
+    fetch('http://localhost:8000/practice')
+    .then(res => {
+      return res.json()
+    })
+    .then((data) => {
+      console.log(data)
+      setPractice(data)
+    })
+  }, [])
+
   return (
     <>
         <Routes>
@@ -32,7 +46,7 @@ const App = () => {
             </>
           }/>
           <Route path="/practice">
-            <Route index element={<Practice />} />
+            {practice && <Route index element={<Practice practice={practice}/>} />}
             <Route path=":id" element={<PracticeItem />} />
           </Route>
           {/* <Route path='/practice/*' element={<Practice />}/> */}
