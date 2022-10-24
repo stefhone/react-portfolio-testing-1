@@ -19,7 +19,8 @@ const Practice = ({practice}) => {
                         return(
                         <article key={id} className="blog-listing__item">
                           <div className="blog-listing__item-image">
-                              <img src={require(`${image}`)} alt={title} />
+                              {/* <img src={require(`${image}`)} alt={title} /> */}
+                              <img src={image} alt={title} />
                           </div>
 
                           <h3>{title}</h3>
