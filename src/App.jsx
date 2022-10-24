@@ -16,18 +16,7 @@ import NotFound from './components/not-found/NotFound';
 
 const App = () => {
 
-  const [practice, setPractice] = useState(null)
-
-  useEffect(() => {
-    fetch('http://localhost:8000/practice')
-    .then(res => {
-      return res.json()
-    })
-    .then((data) => {
-      console.log(data)
-      setPractice(data)
-    })
-  }, [])
+  
 
   return (
     <>
@@ -46,7 +35,7 @@ const App = () => {
             </>
           }/>
           <Route path="/practice">
-            {practice && <Route index element={<Practice practice={practice}/>} />}
+            <Route index element={<Practice />} />
             <Route path=":id" element={<PracticeItem />} />
           </Route>
           {/* <Route path='/practice/*' element={<Practice />}/> */}

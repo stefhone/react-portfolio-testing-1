@@ -1,15 +1,36 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './practice.css'
 import NavSecondary from "../nav-secondary/NavSecondary"
 import * as Constants from "../../utility/constants/practice"
 import PracticeItem from "./practice-item/PracticeItem";
 
-const Practice = ({practice}) => {
+
+const Practice = () => {
+
+  const [practice, setPractice] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      fetch('http://localhost:8000/practice')
+      .then(res => {
+        return res.json()
+      })
+      .then((data) => {
+        console.log(data)
+        setPractice(data)
+        setIsLoading(false)
+      })
+    }, 0)
+  }, [])
 
     return (
       <>
         <NavSecondary />
         
+        { isLoading && <div>Loading...</div>}
+        {practice && 
         <section id="practice" className="blog-listing">
             <h1>REACT Practice Exercises</h1>
             
@@ -37,6 +58,7 @@ const Practice = ({practice}) => {
                 }
             </div>
         </section>
+        }
       </>
     )
 }
