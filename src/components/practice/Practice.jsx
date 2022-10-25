@@ -4,37 +4,11 @@ import './practice.css'
 import NavSecondary from "../nav-secondary/NavSecondary"
 import * as Constants from "../../utility/constants/practice"
 import PracticeItem from "./practice-item/PracticeItem";
-
+import useFetch from "../../hooks/useFetch";
 
 const Practice = () => {
 
-  const [practice, setPractice] = useState(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    setTimeout(() => {
-      fetch('http://localhost:8000/practice')
-        .then(res => {
-          // console.log(res)
-          if(!res.ok) {
-            throw Error ('could not fetch the data for that resource')
-          }
-          return res.json()
-        })
-        .then((data) => {
-          // console.log(data)
-          setPractice(data)
-          setIsLoading(false)
-          setError(null)
-        })
-        .catch(err => {
-          // console.log(err.message)
-          setIsLoading(false)
-          setError(err.message)
-        })
-    }, 0)
-  }, [])
+  const { data: practice, isLoading, error} = useFetch('http://localhost:8000/practice')
 
   console.log(process.env)
 
