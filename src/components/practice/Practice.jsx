@@ -36,6 +36,8 @@ const Practice = () => {
     }, 0)
   }, [])
 
+  console.log(process.env)
+
     return (
       <>
         <NavSecondary />
@@ -52,7 +54,9 @@ const Practice = () => {
                         <article key={id} className="blog-listing__item">
                           <div className="blog-listing__item-image">
                               {/* <img src={require(`${image}`)} alt={title} /> */}
-                              <img src={image} alt={title} />
+                              {/* <img src={image} alt={title} /> */}
+                              {/* <img src={process.env.PUBLIC_URL + '/images/avatar1.jpg'} alt={title} /> */}
+                              <img src={process.env.PUBLIC_URL + image} alt={title} />
                           </div>
 
                           <h3>{title}</h3>

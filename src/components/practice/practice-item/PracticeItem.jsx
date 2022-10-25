@@ -36,8 +36,8 @@ const PracticeItem = (params) => {
                     </div>
                 </div> */}
 
-                {Constants.data.filter(id => id.title === id).map((id, index) => (
-                  <div key={index} className="container">
+                {/* {Constants.data.filter(id => id.title === id).map((id, index) => ( */}
+                  <div className="container">
                     <div className="content">
                       <h3>{id.title}</h3>
                       <article className="">
@@ -46,7 +46,7 @@ const PracticeItem = (params) => {
                       </article>
                   </div>
               </div>  
-                ))}
+                {/* ))} */}
 
             </section>
         </>
