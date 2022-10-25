@@ -10,26 +10,37 @@ const Practice = () => {
 
   const [practice, setPractice] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     setTimeout(() => {
       fetch('http://localhost:8000/practice')
-      .then(res => {
-        return res.json()
-      })
-      .then((data) => {
-        console.log(data)
-        setPractice(data)
-        setIsLoading(false)
-      })
+        .then(res => {
+          // console.log(res)
+          if(!res.ok) {
+            throw Error ('could not fetch the data for that resource')
+          }
+          return res.json()
+        })
+        .then((data) => {
+          // console.log(data)
+          setPractice(data)
+          setIsLoading(false)
+          setError(null)
+        })
+        .catch(err => {
+          // console.log(err.message)
+          setIsLoading(false)
+          setError(err.message)
+        })
     }, 0)
   }, [])
 
     return (
       <>
         <NavSecondary />
-        
-        { isLoading && <div>Loading...</div>}
+        { error && <div>{ error }</div> }
+        { isLoading && <div>Loading...</div> }
         {practice && 
         <section id="practice" className="blog-listing">
             <h1>REACT Practice Exercises</h1>
