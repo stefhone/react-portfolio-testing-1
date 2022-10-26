@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
@@ -15,8 +15,6 @@ import NotFound from './components/not-found/NotFound';
 
 
 const App = () => {
-
-  
 
   return (
     <>
