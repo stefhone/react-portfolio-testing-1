@@ -39,7 +39,7 @@ const PracticeItem = (params) => {
                 {/* {Constants.data.filter(id => id.title === id).map((id, index) => ( */}
                   <div className="container">
                     <div className="content">
-                      <h3>{id.title}</h3>
+                      <h3>{id}</h3>
                       <article className="">
 
                       

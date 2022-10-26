@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import './practice.css'
 import NavSecondary from "../nav-secondary/NavSecondary"
 import * as Constants from "../../utility/constants/practice"
@@ -36,7 +35,7 @@ const Practice = () => {
                           <h3>{title}</h3>
 
                           <div className="blog-listing__item-cta">
-                            <Link to={open} className="btn">
+                            <Link to={`/practice/${id}`} className="btn">
                               Open
                             </Link>
                               <a href={demo} className="btn btn-primary" target='_blank' rel="noreferrer">Live Demo</a>
